@@ -1,8 +1,28 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("../images/bg2.jpg") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
 a {
   color: #00B7FF;
 }
+
+
+.navbar{
+  padding: 10px;
+  font-size: 20px;
+  background-color: rgba(25, 25, 25, 0.678);
+}
+
+.body{
+  text-align: center;
+}
+
+#logo{
+  height: 65px;
+  width: 65px;
+}
+
