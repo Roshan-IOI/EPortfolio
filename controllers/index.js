@@ -10,4 +10,13 @@ router.get('/about', (req, res) => {
   res.render('about', { title: 'About Me'})
 })
 
+router.get('/projects', (req, res) => {
+  res.render('projects', { title: 'Projects'})
+})
+
+router.get('/contact', (req, res) => {
+  res.render('contact', { title: 'Contact me'})
+})
+
+
 module.exports = router;
