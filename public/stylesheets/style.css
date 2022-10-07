@@ -1,81 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html{
+  animation: fadeInPage ease-out 1s ;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInPage {
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  } 
+}
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url("../images/bg1.jpg") ;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: fixed;
   height: 100vh;
-  width: auto;
+  width: 100%;
   overflow: none;
-}
-
-a {
-  color: #00B7FF;
-}
-
-
-
-.navbar{
-  font-size: 25px;
-  background-color: rgba(25, 25, 25, 0.678);
-  position: fixed;
-  width: 100vw;
-  height: 70px;
-  z-index: 1001;
+  /* idea by Manuel Pinto idea from https://codepen.io/P1N2O/pen/pyBNzX */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); 
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
 }
 
 
-#logo{
-  height: 65px;
-  width: 65px;
-
-}
-
-.navbar-nav a{
-  margin: 10px;
-  float: right;
-  border-radius: 30px; 
-  color: rgb(167, 167, 167);
-}
-
-.navbar-nav a:hover{
-  transition: 0.3s;
-  background-color: rgb(29, 29, 29) ;
-  color: white;
+/*idea from https://codepen.io/P1N2O/pen/pyBNzX*/
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .home{
-  /* width: auto;
-  height: auto; */
-  /* display: flex;
-  flex-direction: column; */
-  /* padding-top: 250px; */
-  transform: translateY(225px);  
-  text-align: center;
-  /* transform: translateX(225px); */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 30%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  height: 100vh;
+
 }
 
-/* .about::before{
-  content: '';
-  position: absolute;
+.home h1{
+  font-family: 'Montserrat', sans-serif;
+  animation: fadeIn 1s ease-out; 
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.home p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  padding-bottom: 10px;
+  animation: fadeIn 1.5s ease-out; 
+  transition: all .25s linear;
+}
+
+@keyframes fadeIn {
+  0% { 
+    opacity: 0;
+    transform: translateY(70px); 
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0);   
+  }
+}
+
+footer{
+  position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
+  height:45px;
+  background-color: rgba(36, 36, 36);
+  color: white;
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: #BFC0C0;
+  text-decoration: none;
+}
+
+a:hover{
+  color:#607D8B;
+}
+
+#logo{
+  height: 45px;
+  width: 45px;
+  margin: 5px;
+  opacity: .663;
+}
+
+#logo:hover{
+  opacity: 1;
+  transition: .2s;
+}
+
+.right{
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  padding-right: 30px;
+}
+
+.navbar{
+  font-size: 20px;
+  background-color: rgba(36, 36, 36);
+  padding: 2px;
+  width: auto;
+  height: auto;
+  z-index: 1001;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-nav a{
+  padding-right: 12px !important;
+  float: right;
+  color: rgb(255, 247, 247);
+  padding-left: 15px;
+}
+
+.navbar-nav a:hover{
+  color: black;
+  transition: 0.3s;
+  border-bottom: 2px solid black;
+}
+
+.nav-link:active{
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.nav-link {
+  padding-right: 10px;
+}
+
+.navbar-brand {
+  padding-left: 20px;
+}
+
+
+#swap{
+  transition: all .5s linear;
+}
+
+#swap:after {
+  content:'';
+  animation: spin 12s linear infinite;
+}
+
+@keyframes spin {
+  0% { 
+    opacity: 1;
+    content:'a developer';
+    color:#e73c7e;
+  }
+  16%{
+    opacity:0;
+  }
+  32% { 
+    opacity: 1;
+    content: 'a 3d artist';
+    color:#23a6d5;
+  }
+  48%{
+    opacity: 0;
+  }
+  64% {
+    opacity: 1;
+    content: 'a game designer';
+    color:#23d5ab;
+  }
+  80%{
+    opacity: 0;
+  }
+  96%{
+    color: #e73c7e;
+    content: 'a developer';
+  }
+  100%{
+    opacity: 1;
+    content: 'a developer';
+    color: #e73c7e;
+  }
+
+}
+
+button{
+  animation: fadeIn 1.75s ease-out;
+  border: none;
+  background: none;
+  font-size: 20px;
+}
+
+button:hover a{
+  color: white;
+}
+
+.fa-brands{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/*button from https://getcssscan.com/css-buttons-examples */
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
   width: 100%;
-  height: 100px;
-  background: linear-gradient(to top,rgb(29, 29, 29), transparent );
-  z-index: 1000;
-  overflow: none;
-} */
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
 
 .about{
-  background-color:rgba(29, 29, 29, 0.575) ;
+  background-color:rgb(255, 255, 255) ;
   width: auto;
   height: 100vh;
-  color: white;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 300px;
-  padding-top: 200px;
+}
 
+.about h1{
+  font-family: 'Montserrat', sans-serif;
 }
