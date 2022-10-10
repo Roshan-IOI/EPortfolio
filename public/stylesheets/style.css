@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+}
 
 html{
   animation: fadeInPage ease-out .5s ;
@@ -23,13 +30,8 @@ html{
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   height: 100vh;
-  width: 100%;
   overflow: none;
-
-  /* idea by Manuel Pinto idea from https://codepen.io/P1N2O/pen/pyBNzX */
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); 
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  background-color: #1A1A1A;
 }
 
 
@@ -48,6 +50,7 @@ body {
 
 footer{
   position: fixed;
+  font-family: 'Cedarville Cursive', cursive;
   bottom: 0;
   left: 0;
   right: 0;
@@ -58,6 +61,7 @@ footer{
   font-size: 15px;
   align-items: center;
   justify-content: center;
+  z-index: 10000;
 }
 
 a {
@@ -103,19 +107,30 @@ a:hover{
   padding-right: 30px;
 }
 
- .navbar{
-  font-size: 25px;
-  background-color: rgba(36, 36, 36);
+.navbar{
+  font-size: 20px;
+  background-color: #242424;
   padding: 5px;
-  padding-left: 10px;
-  padding-right: 20px;
-  width: auto;
+  padding-left: 30px;
+  padding-right: 40px;
   height: auto;
   z-index: 1001;
   font-family: 'Poppins', sans-serif;
 }
 
+.navbar-brand{
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+}
+
+.navbar-brand:hover{
+  transition: 0.1s;
+  color: #fff;
+  text-shadow: 0 0 10px white; 
+}
+
 .navbar-dark{
+  text-shadow: 0 0 10px white; 
   color: #32e2f5;
 }
 
@@ -136,7 +151,6 @@ a:hover{
   transform: translateY(2px);
 }
 
-
 /*idea from https://www.30secondsofcode.org/css/s/hover-underline-animation*/
 .hover-underline-animation {
   display: inline-block;
@@ -148,7 +162,6 @@ a:hover{
   transition: .1s;
   text-shadow: 0 0 8px #32e2f5; 
 }
-
 
 .hover-underline-animation:after {
   content: '';
@@ -166,7 +179,6 @@ a:hover{
 .hover-underline-animation:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
-
 }
 
 /* css for icons in the footer */
@@ -175,11 +187,8 @@ a:hover{
   margin-right: 5px;
 }
 
-
-
 .home{
   position: relative;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,6 +197,13 @@ a:hover{
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   color: #1A1A1A;
+  height: 100%;
+  width: 100%;
+    
+  /*Manuel Pinto idea from https://codepen.io/P1N2O/pen/pyBNzX */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); 
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 
 .home h1{
@@ -229,7 +245,6 @@ a:hover{
   text-decoration: none;
   text-shadow: 0 0 5px #fff; 
 }
-
 
 #switch{
   transition: all .5s linear;
@@ -280,94 +295,10 @@ a:hover{
   80%{
     opacity: 0;
   }
-
     96%,100%{
     opacity: 1;
     content: 'a programmer';
     color: white;
   }
-
 }
 
-.about{
-
-  height: 100vh;
-  background-color: #1A1A1A;
-}
-
-.about h1{
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  text-align: center;
-  font-size: 50px;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #ee7752, #e73c7e, #23a6d5, #23d5ab); 
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: 10;
-  animation: fadeInH1 .75s ease, gradient-text 15s ease infinite;
-  transform: translateY(30px);
-}
-@keyframes gradient-text {
-  0% {
-    background-position: 0% 50%;
-  }
-  50%{
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes fadeInH1 {
-  0% { 
-    opacity: 0;
-    transform: translateY(-30px); 
-  }
-  55% { 
-    opacity: 1;
-    transform: translateY(35px);   
-  }
-  90%{
-    transform: translateY(28px);
-  }
-  100%{
-    transform: translateY(30px);
-  }
-}
-
-.container{
-  display: flex;
-  justify-content: center !important;
-}
-
-.box{
-  text-align: justify;
-  max-width: 700px;
-  padding: 20px;
-  padding-top: 50px;
-  background-color: #2f2f2fac;
-  border-radius: 10px;
-  margin: 0 auto;
-  z-index: 1;
-
-}
-
-.subhead{
-  text-align: left;
-  max-width: 600px;
-  font-size: xx-large;
-  line-height: 30px;
-  margin-bottom: 30px;
-  word-spacing: 10px;
-}
-
-.about p{
-  color: aliceblue;
-  font-size: 30px;
-  font-family: 'Lato', sans-serif;
-  text-align: left;
-  animation: fadeIn 1s ease-out; 
-}

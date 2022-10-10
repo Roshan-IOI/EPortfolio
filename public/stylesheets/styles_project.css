@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.project{
+    padding-bottom: 30px;
+    /* height:100%; */
+    position: relative;
+  }
+  
+  .project h1 .title{
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-size: 90px;
+    height: auto;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #ee7752, #e73c7e, #23a6d5, #23d5ab); 
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 10;
+    animation: fadeIn 1.5s ease, gradient-text 15s ease infinite;
+    line-height: 1.75;
+  }
+
+  .top-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(0deg, transparent  0%,transparent  10%, #242424 68%,#242424 100%);
+  }
+  
+  .project p{
+    color: aliceblue;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    text-align: center;
+  }
