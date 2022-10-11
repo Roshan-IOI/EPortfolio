@@ -1,3 +1,4 @@
+/* font imports from https://fonts.google.com */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
@@ -17,6 +18,7 @@ html{
   animation-fill-mode: forwards;
 }
 
+/* animation for fade in effect during page change */
 @keyframes fadeInPage {
   0%{
     opacity: 0;
@@ -35,7 +37,7 @@ body {
 }
 
 
-/*idea from https://codepen.io/P1N2O/pen/pyBNzX*/
+/*gradient animation idea from https://codepen.io/P1N2O/pen/pyBNzX*/
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -73,31 +75,6 @@ a:hover{
   text-decoration: none;
 }
 
-#logo{
-  height: 65px;
-  width: 65px;
-  opacity: .663;
-}
-
-#logo:hover{
-  opacity: 1;
-  transition: .2s;
-  transform: translateY(-2px);
-}
-
-#logo:active{
-  transition: .1s;
-  transform: translateY(0);
-}
-
-@keyframes rotate{
-  0%{
-    transform: rotate(0deg);
-  }
-  100%{
-    transform: rotate(-360deg);
-  }
-}
 
 .right{
   position: absolute;
@@ -196,9 +173,6 @@ a:hover{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* top: 40%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); */
   color: #1A1A1A;
   height: 100%;
   width: 100%;
@@ -224,6 +198,7 @@ a:hover{
   transition: all .25s linear;
 }
 
+/* animation to fade into the page */
 @keyframes fadeIn {
   0% { 
     opacity: 0;
@@ -259,6 +234,7 @@ a:hover{
   animation: switch 15s linear infinite;
 }
 
+/* animation used in Index.hbs to change the contents of the span */
 @keyframes switch {
   0% { 
     opacity: 1;
