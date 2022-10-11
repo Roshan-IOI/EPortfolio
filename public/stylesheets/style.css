@@ -49,16 +49,15 @@ body {
 }
 
 footer{
-  position: fixed;
   font-family: 'Cedarville Cursive', cursive;
   bottom: 0;
   left: 0;
   right: 0;
-  height:45px;
+  height:55px;
   background-color: rgba(36, 36, 36);
   color: white;
   display: flex;
-  font-size: 15px;
+  font-size: 20px;
   align-items: center;
   justify-content: center;
   z-index: 10000;
@@ -111,8 +110,8 @@ a:hover{
   font-size: 20px;
   background-color: #242424;
   padding: 5px;
-  padding-left: 30px;
-  padding-right: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
   height: auto;
   z-index: 1001;
   font-family: 'Poppins', sans-serif;
@@ -121,6 +120,8 @@ a:hover{
 .navbar-brand{
   font-size: 30px;
   font-family: 'Pacifico', cursive;
+  padding-left: 30px;
+  transition: 1s;
 }
 
 .navbar-brand:hover{
@@ -133,6 +134,8 @@ a:hover{
   text-shadow: 0 0 10px white; 
   color: #32e2f5;
 }
+
+
 
 .navbar-nav a{
   padding-right: 12px !important;
@@ -193,9 +196,9 @@ a:hover{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  top: 40%;
+  /* top: 40%;
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
   color: #1A1A1A;
   height: 100%;
   width: 100%;
@@ -237,6 +240,7 @@ a:hover{
 
 .home a{
   color: white;
+  transition: 1s;
 }
 
 .home a:hover{
