@@ -46,6 +46,7 @@
 .top-content h1{
     color: white;
     font-family: 'Montserrat', sans-serif;
+    animation: fadeIn 1s ease
 }
 
 .contact-container{
@@ -63,31 +64,50 @@
     color: white;
     padding: 20px;
     padding-left: 70px;
+    animation: fadeIn 3s ease
 }
 
-.frm{
+.right-text{
     width: 100%;
     padding: 30px;
-display: flex;
-justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
 }
-.frm-content{   
+
+.right-text-content{   
     width: 500px;
-}
-label{
-    color: #fff;
-}
-
-form .btn{
-    background-color: #242424;
-    color: #fff;
-    transition: 0.2s;
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
 }
 
-form .btn:hover{
-    transition: 0.2s;
-    background-color: #454545;
+.contact .fa-brands,.fa-regular, .fa-solid{
+    background: linear-gradient(-75deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #ee7752, #e73c7e, #23a6d5, #23d5ab); 
+    background-size: 600% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 10;
+    animation: fadeIn 2s ease, gradient-text 20s ease infinite;
+}
+
+
+
+.right-text-content a{
     color: #fff;
-    text-shadow: 0 0 10px #fff; 
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 30px;
+    transition: 1s;
+    animation: fadeIn 2s ease;
+}
+.right-text-content a:hover{
+    transition: 0.2s;
+    color: #32e2f5;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 30px;
+    text-shadow: 0 0 7px #32e2f5;
 }
