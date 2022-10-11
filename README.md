@@ -5,4 +5,4 @@
 <p>All references has been commented along with the code.</p>
 <p><a href="https://roshanpadmanabhan.onrender.com" >Click to open the Live Site</a> or copy and paste it. https://roshanpadmanabhan.onrender.com</p>
 
-<p>This site will be update as I progress in my career</p>
+<p>This site will be updated as I progress in my career</p>
